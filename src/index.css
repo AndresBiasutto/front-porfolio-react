@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Neonderthaw&family=Raleway+Dots&family=Tilt+Neon&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --title: 'Neonderthaw', cursive;
+  --paragraph: 'Raleway Dots', cursive;
+  --button: 'Tilt Neon', cursive;
+  --button2: 'Bungee Hairline', cursive;
+  --grayOrange: #8C623E;
+  --orange:#F28B50;
+  --brown:#40291C;
+  --red:#BF491F;
+  --black:#0D0908;
+  --white: #f0f0f0;
+}
+
+body{
+  background-color: var(--white);
+  font-family: var(--paragraph);
+  color: white;
+}
+
+h1, h2, h3, h4{
+  font-family: var(--button2);
+  color: var(--orange);
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+label{
+  font-family: var(--button2);
+  font-weight: bold;
+  color: var(--orange);
+  line-height: 1;
+}
+input{
+  background-color: var(--orange);
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px;
+  height: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--grayOrange);
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 1px 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: var(--button2);
+  font-size: .7rem;
+  color: var(--red);
+  font-weight: bold;
+  transition: all .4s ease;
+  border: 1px solid var(--red);
+  cursor: pointer;
+}
+
+.button:hover {
+  color: orange;
+  border: 1px solid var(--orange);
+  box-shadow: 0 0 10px var(--red),
+      0 0 40px var(--red);
+  transform: scale(1.05);
+}
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 15px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Estilo del track */
+::-webkit-scrollbar-track {
+  background-color: var(--red); /* Color de fondo del track */
+}
+
+/* Estilo del thumb (el "mango" de la barra de desplazamiento) */
+::-webkit-scrollbar-thumb {
+  background-color: black; /* Color del thumb al pasar el mouse */
+  border: 1px solid var(--red);
+  border-radius: 10px; /* Bordes redondeados del thumb */
+}
+
+/* Estilo del thumb al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--orange); /* Color del thumb al pasar el mouse */
+
+}
+@media screen and (max-width: 768px){
+  .button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1px 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: var(--button2);
+    font-size: .7rem;
+    color: var(--red);
+    font-weight: bold;
+    transition: all .4s ease;
+    border: 1px solid var(--red);
+    cursor: pointer;
+  }
+
+}

@@ -1,0 +1,322 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+}
+
+.cartel {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 15rem;
+    border-radius: 30rem;
+    border: 6px double var(--brown);
+    animation-name: imgOn;
+    animation-duration: 1s;
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    color: var(--orange);
+    font-weight: normal;
+    font-size: 5rem;
+    font-family: var(--title);
+    text-shadow: none;
+    color: var(--brown);
+    animation-name: cartelOn;
+    animation-duration: 1s;
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+    animation-delay: 1.3s;
+}
+
+.blink {
+    animation-name: cartelOn;
+    animation-duration: .5s;
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+
+.subTitle {
+    font-family: var(--button2);
+    color: var(--brown);
+    font-weight: 900;
+    font-size: 2rem;
+    animation-name: cartelOn;
+    animation-duration: 1s;
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.buttonPannel {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 100px;
+    margin: 20px;
+}
+
+.buttonDownload {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 1px 10px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-family: var(--button2);
+    font-size: .7rem;
+    color: var(--red);
+    font-weight: bold;
+    transition: all .4s ease;
+    border: 1px solid var(--red);
+    height: 30px;
+    overflow: hidden;
+}
+
+.pdfcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pdfDownload {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    padding: 4px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--red);
+    border: 1px solid var(--red);
+    border-radius: 500px;
+    font-size: .5rem;
+    filter: blur(20px);
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.pdfDownload:hover {
+    color: orange;
+    border: 1px solid var(--orange);
+    box-shadow: 0 0 10px var(--red),
+        0 0 40px var(--red);
+    transform: scale(1.05);
+}
+
+.ico {
+    font-size: 2rem;
+}
+
+.buttonDownload:hover {
+    color: orange;
+    border: none;
+    cursor: default;
+    border: 1px solid white;
+    padding-bottom: 100px;
+    border: 1px solid var(--orange);
+    box-shadow: 0 0 10px var(--red),
+        0 0 40px var(--red);
+    transform: scale(1.05);
+}
+.buttonDownload:hover .pdfDownload{
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* -----ANIMATION----- */
+@keyframes imgOn {
+    0% {
+        border-color: var(--brown);
+        box-shadow: none;
+    }
+
+    20% {
+        border-color: orange;
+        box-shadow: 0 0 10px var(--red),
+            0 0 70px var(--red);
+
+    }
+
+    40% {
+        border-color: var(--brown);
+        box-shadow: none;
+    }
+
+    60% {
+        border-color: orange;
+        box-shadow: 0 0 10px var(--red),
+            0 0 70px var(--red);
+
+    }
+
+    80% {
+        border-color: var(--brown);
+        box-shadow: none;
+    }
+
+    100% {
+        border-color: orange;
+        border-color: orange;
+        box-shadow: 0 0 10px var(--red),
+            0 0 70px var(--red);
+
+    }
+}
+
+@keyframes cartelOn {
+    0% {
+        color: var(--brown);
+        text-shadow: none;
+    }
+
+    20% {
+        color: orange;
+        text-shadow: 0 0 10px var(--red),
+            0 0 20px var(--red),
+            0 0 30px var(--red),
+            0 0 40px var(--red),
+            0 0 70px var(--red),
+            0 0 80px var(--red),
+            0 0 100px var(--red),
+            0 0 150px var(--red);
+    }
+
+    40% {
+        color: var(--brown);
+        text-shadow: none;
+    }
+
+    60% {
+        color: orange;
+        text-shadow: 0 0 10px var(--red),
+            0 0 20px var(--red),
+            0 0 30px var(--red),
+            0 0 40px var(--red),
+            0 0 70px var(--red),
+            0 0 80px var(--red),
+            0 0 100px var(--red),
+            0 0 150px var(--red);
+    }
+
+    80% {
+        color: var(--brown);
+        text-shadow: none;
+    }
+
+    100% {
+        color: orange;
+        text-shadow: 0 0 10px var(--red),
+            0 0 20px var(--red),
+            0 0 30px var(--red),
+            0 0 40px var(--red),
+            0 0 70px var(--red),
+            0 0 80px var(--red),
+            0 0 100px var(--red),
+            0 0 150px var(--red);
+    }
+}
+
+/* -----MOBILE----- */
+@media (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {
+
+    /* Estilos para dispositivos móviles */
+    .cartel {
+        flex-direction: column;
+        gap: .8rem;
+        min-width: 290px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subTitle {
+        font-size: 1rem;
+    }
+
+    .image {
+        width: 200px;
+    }
+
+    .button {
+        font-weight: 400;
+        color: var(--orange);
+        border: 1px solid var(--red);
+        border-radius: 5px;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Estilos para tablets */
+    .cartel {
+        flex-direction: column;
+        gap: .8rem;
+        min-width: 290px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subTitle {
+        font-size: 1rem;
+    }
+
+    .image {
+        width: 200px;
+    }
+
+    .button {
+        font-weight: 400;
+        font-size: 1.5rem;
+        color: var(--orange);
+        line-height: 1;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Estilos para pantallas de escritorio */
+}

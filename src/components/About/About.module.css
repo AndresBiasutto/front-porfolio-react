@@ -1,0 +1,208 @@
+.container {
+    position: relative;
+    height: 300vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(13, 9, 8);
+    background: linear-gradient(176deg, rgba(13, 9, 8, 1) 45%, rgba(191, 73, 31, 1) 100%);
+}
+
+.neonWall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.satelite {
+    width: 400px;
+    position: absolute;
+    top: -5%;
+    left: 50%;
+}
+
+.ciudad {
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    width: 100%;
+    object-fit: fill;
+}
+
+.charts {
+    padding: 320px;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: absolute;
+    background: #0d0908c4;
+    border-radius: 10px;
+    right: -100%;
+    top: 50%;
+    width: 45%;
+    height: 500px;
+    overflow: auto;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 90%;
+}
+
+.textTitle {
+    font-family: var(--button2);
+    color: var(--orange);
+
+}
+
+.certificatesBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificados {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 90%;
+}
+
+
+.certIco {
+    font-size: 1rem;
+}
+
+.skillsBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skillCard {
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: .1px solid var(--red);
+    border-radius: 10px;
+}
+
+.skillLogo {
+    font-size: 3.5rem;
+    padding: 5px;
+    color: var(--red);
+}
+
+.textText {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: .8rem;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.skillText {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    font-family: var(--button2);
+    font-weight: bold;
+    font-size: .7rem;
+    color: var(--orange);
+}
+
+.skillText::before {
+    position: absolute;
+    top: 10px;
+    content: "";
+    height: .1px;
+    width: 100%;
+    background-color: var(--red);
+    box-shadow: 0 0 10px var(--orange),
+        0 0 30px var(--red),
+        0 0 70px var(--red);
+}
+
+
+@media screen and (max-width: 480px) {
+    /* Estilos para dispositivos móviles */
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Estilos para tablets */
+    .container {
+        height: 100%;
+    }
+
+
+
+    .parallax {
+        display: none;
+    }
+
+    .charts {
+        padding: 50px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .chart {
+        position: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        z-index: 2;
+        padding-bottom: 10px;
+    }
+
+    .satelite {
+        z-index: -100;
+        top: 0;
+        left: 23%;
+        z-index: 1;
+    }
+
+    .ciudad {
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Estilos para pantallas de escritorio */
+}

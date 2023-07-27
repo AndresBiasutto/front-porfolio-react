@@ -1,0 +1,154 @@
+.container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    width: 100%;
+}
+
+.insideBox {
+    max-width: 1200px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.social {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 5rem;
+    color: var(--orange);
+    transition: all .3s ease;
+    border: 1px solid var(--orange);
+    padding: 10px;
+    border-radius:100px;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    color: orange;
+    border: 1px solid orange;
+    box-shadow: 0 0 5px var(--orange),
+    0 0 20px var(--orange);
+}
+
+.form {
+    width: 50%;
+    height: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--brown);
+    border-radius: 10px;
+}
+
+.labelAndInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: cen;
+    justify-content: center;
+}
+.label:focus{
+    color: orange;
+    text-shadow: 0 0 5px var(--orange),
+    0 0 20px var(--orange);
+}
+.input {
+    width: 100%;
+    border: 2px solid transparent;
+}
+
+.input:focus {
+    border-color: orange;
+    box-shadow: 0 0 5px var(--orange),
+            0 0 20px var(--orange);
+    outline: none;
+}
+.input:focus .label{
+    border-color: orange;
+    box-shadow: 0 0 5px var(--orange),
+            0 0 20px var(--orange);
+    outline: none;
+}
+.span{
+    color: var(--orange);
+    font-family: var(--button);
+  }
+.textArea{
+    background-color: var(--orange);
+    border-radius: 10px;
+    height: 5rem;
+    font-size: 1.2rem;
+    color: var(--grayOrange);
+}
+.send {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 1.5rem;
+    background-color: transparent;
+    border-style: solid;
+    border-color: orange;
+    font-family: var(--button2);
+    color: orange;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: box-shadow .3s ease;
+}
+.send:hover{
+    box-shadow: 0 0 5px var(--orange),
+            0 0 20px var(--orange);
+}
+
+@media screen and (max-width: 480px) {
+    /* Estilos para dispositivos móviles */
+
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para tablets */
+    .container{
+        height: 85vh;
+    }
+    .insideBox{
+        flex-direction: column-reverse;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .social{
+        flex-direction: row;
+    }
+    .form{
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Estilos para pantallas de escritorio */
+    .insideBox{
+        max-width: 1200px;
+    }
+}

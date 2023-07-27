@@ -1,0 +1,85 @@
+.navContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: red;
+    padding: 10px;
+  }
+  .nav {
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: transparent;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+  }
+  
+  .nav.open {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    background-color: red;
+    transform: translateX(0);
+  }
+  
+  .nav a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .menuButton {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menuIcon {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .navContainer {
+      flex-wrap: wrap;
+    }
+  
+    .menuButton {
+      display: block;
+    }
+  
+    .menuIcon {
+      background-color: white;
+      transition: transform 0.3s ease-in;
+    }
+  
+    .nav.open .menuIcon:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .nav.open .menuIcon:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .nav.open .menuIcon:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
