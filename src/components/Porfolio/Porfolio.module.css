@@ -145,12 +145,12 @@
     }
 
     .container {
-        height: 100%;
+        height: 110%;
         padding: 20px;
     }
 
     .cardSlide {
-        height: 100%;
+        height: 110%;
         flex-direction: column;
         gap: 20px;
     }
@@ -161,14 +161,32 @@
         min-width: 90vw;
         transition: none;
     }
+    .cardMobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border: 1px solid var(--red);
+        border-radius: 10px;
+        width: 320px;
+        height: 340px;
+        overflow: hidden;
+        transition: all .5s ease;
+        cursor: pointer;
+        max-height: 600px;
+    }
 
     .card:hover {
         border: 1px solid var(--red);
         box-shadow: none;
+        height: 60vh;
+        width: 100%;
     }
 
     .info {
         top: 50%;
+        height: 85%;
     }
 
 }

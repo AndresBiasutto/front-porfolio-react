@@ -7,13 +7,14 @@ import { TbBrandGithub } from "react-icons/tb";
 import { FiExternalLink } from "react-icons/fi";
 
 const Porfolio = () => {
+  const isMobileSize = window.innerWidth <= 768;
   return (
     <div id='porfolio' className={styles.container} >
       <div className={styles.cardsContainer}>
         <h2>Some of my work</h2>
         <div className={styles.cardSlide}>
 
-          <a href="#" target='_blank' className={styles.card}>
+          <a href="#" target='_blank' className={`${isMobileSize? styles.cardMobile: styles.card}` }>
             <img className={styles.image} src={thisProject} alt="" />
             <div className={styles.info}>
               <h3 className={styles.title}>This portfolio</h3>
@@ -34,7 +35,7 @@ const Porfolio = () => {
             </div>
           </a>
 
-          <a href="https://main--darling-pixie-1046a3.netlify.app/" target='_blank' className={styles.card}>
+          <a href="https://main--darling-pixie-1046a3.netlify.app/" target='_blank' className={`${isMobileSize? styles.cardMobile: styles.card}` }>
 
             <img className={styles.image} src={dogsApi} alt="" />
             <div className={styles.info}>
@@ -56,7 +57,7 @@ const Porfolio = () => {
 
           </a>
 
-          <a href="https://sml-app.vercel.app/sign-in?redirect_url=%2Fprotected" target='_blank' className={styles.card}>
+          <a href="https://sml-app.vercel.app/sign-in?redirect_url=%2Fprotected" target='_blank' className={`${isMobileSize? styles.cardMobile: styles.card}` }>
 
             <img className={styles.image} src={sml} alt="" />
             <div className={styles.info}>
