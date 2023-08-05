@@ -1,12 +1,26 @@
 import React from 'react'
 import "./Navbar.css"
 import { Link } from 'react-scroll';
-import { useState } from 'react';
-import About from '../About/About';
+import { useState, useEffect } from 'react';
+
 
 const Nav = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showNavBar, setShowNavBar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setShowNavBar(true);
+      } else {
+        setShowNavBar(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,13 +28,13 @@ const Nav = () => {
 
   return (
     <>
-      <div className="navbar">
-        <div className="nav_logo">{"AB"} </div>
+      <div className={`navbar ${showNavBar ? 'visible' : 'hidden'}`}>
+        <div className="nav_logo">Andres Biasutto</div>
         <div className={`nav_items ${isMenuOpen && "open"}`}>
           <Link
             to="hero"
             smooth={true}
-            duration={700}
+            duration={1000}
             onClick={handleMenuToggle}
           >
             home
@@ -28,7 +42,7 @@ const Nav = () => {
           <Link
             to="about"
             smooth={true}
-            duration={700}
+            duration={1000}
             onClick={handleMenuToggle}
           >
             about
@@ -36,7 +50,7 @@ const Nav = () => {
           <Link
             to="porfolio"
             smooth={true}
-            duration={700}
+            duration={1000}
             onClick={handleMenuToggle}
           >
             Portfolio
@@ -44,7 +58,7 @@ const Nav = () => {
           <Link
             to="contact"
             smooth={true}
-            duration={700}
+            duration={1000}
             onClick={handleMenuToggle}
           >
             Contact

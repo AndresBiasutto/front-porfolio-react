@@ -5,36 +5,29 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--black);
 }
 
 .cartel {
-    width: 100%;
+    width: auto;
+    height: auto;
+    padding: 20px;
     max-width: 1200px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-}
-
-.design {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.image {
-    width: 15rem;
-    border-radius: 30rem;
-    border: 6px double var(--brown);
+    border: 2px solid var(--brown);
+    border-radius: 10px;
     animation-name: imgOn;
     animation-duration: 1s;
     animation-timing-function: step-end;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 1.3s;
+    background-color: var(--black);
 }
+
+
 
 .titles {
     display: flex;
@@ -87,6 +80,14 @@
     width: 100%;
     height: 100px;
     margin: 20px;
+    opacity: 0;
+    filter: blur(4);
+    transform: scale(.5);
+    animation-name: buttonsIn;
+    animation-duration: .4s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
 }
 
 .buttonDownload {
@@ -100,13 +101,15 @@
     border-radius: 10px;
     background-color: transparent;
     font-family: var(--button2);
-    font-size: .7rem;
+    font-size: 1rem;
     color: var(--red);
     font-weight: bold;
     transition: all .4s ease;
     border: 1px solid var(--red);
     height: 30px;
     overflow: hidden;
+    width: 100%;
+    height: 40px;
 }
 
 .pdfcontainer {
@@ -157,7 +160,21 @@
         0 0 40px var(--red);
     transform: scale(1.05);
 }
-.buttonDownload:hover .pdfDownload{
+.buttonDown{
+    margin-top: 40px;
+    cursor: pointer;
+}
+.arrow{
+    font-size: 2rem;
+    color: var(--brown);
+    animation-name: arrow;
+    animation-delay: 6s;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    border-radius: 400px;
+}
+.buttonDownload:hover .pdfDownload {
     opacity: 1;
     filter: blur(0);
 }
@@ -171,8 +188,8 @@
 
     20% {
         border-color: orange;
-        box-shadow: 0 0 10px var(--red),
-            0 0 70px var(--red);
+        box-shadow: inset 0 0 10px var(--red),
+            0 0 40px var(--red);
 
     }
 
@@ -196,12 +213,24 @@
     100% {
         border-color: orange;
         border-color: orange;
-        box-shadow: 0 0 10px var(--red),
-            0 0 70px var(--red);
+        box-shadow: inset 0 0 10px var(--red),
+            0 0 20px var(--red);
 
     }
 }
+@keyframes buttonsIn {
+    0% {
+        opacity: 0;
+        filter: blur(4);
+        transform: scale(.5);   
+    }
 
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
 @keyframes cartelOn {
     0% {
         color: var(--brown);
@@ -254,7 +283,19 @@
             0 0 150px var(--red);
     }
 }
+@keyframes arrow {
+    0% {
+        color: var(--brown);
+        box-shadow: none;
+    }
 
+    100% {
+        color: orange;
+        box-shadow: 0 0 10px var(--red),
+            0 0 20px var(--red)
+
+    }
+}
 /* -----MOBILE----- */
 @media (max-width: 768px) {}
 
@@ -277,6 +318,10 @@
 
     .image {
         width: 200px;
+    }
+
+    .buttonPannel {
+        flex-direction: column;
     }
 
     .button {
@@ -314,6 +359,9 @@
         font-size: 1.5rem;
         color: var(--orange);
         line-height: 1;
+    }
+    .buttonDownload{
+        font-size: 1rem;
     }
 }
 

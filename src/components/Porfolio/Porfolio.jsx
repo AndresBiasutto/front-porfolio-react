@@ -22,11 +22,11 @@ const Porfolio = () => {
               <p className={styles.description}>Design and develop my personal landing page </p>
               <ul className={styles.tecList}>
                 <li className={styles.objetive}>technologies:</li>
-                <li className={styles.tec}>React.js</li>
-                <li className={styles.tec}>Redux.js</li>
-                <li className={styles.tec}>Node.js</li>
-                <li className={styles.tec}>Express.js</li>
-                <li className={styles.tec}>MongoDB.js</li>
+                <li className={styles.description}>React.js</li>
+                <li className={styles.description}>Redux.js</li>
+                <li className={styles.description}>Node.js</li>
+                <li className={styles.description}>Express.js</li>
+                <li className={styles.description}>MongoDB.js</li>
               </ul>
               <div className={styles.buttonPannel}>
               <a className={styles.gitButton} target='_blank' href="#"><FiExternalLink /></a>

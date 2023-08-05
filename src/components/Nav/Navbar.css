@@ -1,6 +1,6 @@
 .navbar {
     position: fixed;
-    top: 10px;
+    top: -40px;
     background-color: var(--black);
     border-radius: 10px;
     max-width: 700px;
@@ -11,6 +11,18 @@
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+    top: 10px;
+}
+
+.hidden {
+    opacity: 0;
+    top: -40px;
 }
 
 .nav_logo {
@@ -33,7 +45,7 @@
     font-weight: bold;
     margin: 15px;
     font-family: var(--button2);
-    color: var(--red);
+    color: var(--orange);
     position: relative;
     text-decoration: none;
     border-bottom: 1px groove transparent;
@@ -58,12 +70,10 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {}
 
-
-
-}
 @media screen and (max-width: 480px) {
+
     /* Estilos para dispositivos móviles */
     .nav_items {
         position: absolute;
@@ -119,18 +129,21 @@
 }
 
 @media screen and (max-width: 768px) {
+
     /* Estilos para tablets */
-    .navbar{
+    .navbar {
         max-width: 400px;
     }
-    .nav_items a{
+
+    .nav_items a {
         margin: 5px;
     }
 }
 
 @media screen and (min-width: 1024px) {
+
     /* Estilos para pantallas de escritorio */
-    .navbar{
+    .navbar {
         max-width: 1200px;
     }
 }
