@@ -28,7 +28,14 @@
 
 .ciudad {
     position: absolute;
-    bottom: -40%;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    object-fit: fill;
+}
+.trash {
+    position: absolute;
+    bottom: -100%;
     left: 0;
     width: 100%;
     object-fit: fill;
