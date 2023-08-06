@@ -24,7 +24,7 @@
     animation-timing-function: step-end;
     animation-fill-mode: forwards;
     animation-delay: 1.3s;
-    background-color: var(--black);
+    background-image: url("../../assets/img/paisajeMarte.png");
 }
 
 
@@ -99,7 +99,7 @@
     gap: 10px;
     padding: 1px 10px;
     border-radius: 10px;
-    background-color: transparent;
+    background-color: var(--black);
     font-family: var(--button2);
     font-size: 1rem;
     color: var(--red);
